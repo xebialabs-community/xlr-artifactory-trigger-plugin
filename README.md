@@ -17,9 +17,11 @@ This XLR Artifactory trigger plugin helps create a trigger which will automatica
 
 * Place the plugin JAR file into your `SERVER_HOME/plugins` directory.
 * Also edit the SERVER_HOME/conf/script.policy file to add the following permission
-	
-	permission java.lang.RuntimePermission "accessClassInPackage.com.sun.org.apache.xerces.internal.*";
 
+```	
+permission java.lang.RuntimePermission "accessClassInPackage.com.sun.org.apache.xerces.internal.*";
+
+```
 * Restart the server  
 
 # Usage #
