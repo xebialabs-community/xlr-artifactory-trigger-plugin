@@ -21,8 +21,10 @@ Place the plugin JAR file into your `SERVER_HOME/plugins` directory.
 
 
 The trigger needs to be configured first under the configuration section to point to the right artifactory repository
+
 ![Trigger Configuration] (/triggerConfig.png)
 
 
 The second piece of configuration is inside the XLR Template to use the trigger 
+
 ![Configuration] (/triggerTemplate.png)
