@@ -16,7 +16,7 @@
         <!--<property name="version" default="LATEST" required="true" description="Version of the artifact, supports resolving of 'LATEST'(default), 'RELEASE' and snapshot versions (e.g. '1.0-SNAPSHOT'). Specify 'LATEST' to trigger on both, release and snapshot versions of a particular artifact. With 'RELEASE' only release versions will be tracked. Triggering on release version re-deployments (e.g. 1.0.0) is not supported"/>
 		-->
         <!-- repository -->
-        <property name="server" category="Repository" referenced-type="artifactory.Server" kind="ci" description="Sonatype Artifactory server to poll"/>
+        <property name="server" category="Repository" referenced-type="artifactory.Server" kind="ci" description="Artifactory server to poll"/>
         <property name="repositoryId" category="Repository" required="true" description="Repository ID to watch, e.g. releases, snapshots, apache-snapshots"/>
         <property name="username" category="Repository" default="" required="false" description="Custom username to override global server configuration"/>
         <property name="password" category="Repository" default="" required="false" password="true" description="Custom password to override global server configuration"/>

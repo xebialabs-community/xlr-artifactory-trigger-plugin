@@ -27,11 +27,11 @@ if not response.isSuccessful():
     if response.status == 404 and triggerOnInitialPublish:
         print "Artifact '%s:%s' not found in repository '%s'. Ignoring." % (groupId, artifactId, repositoryId)
         # the following initialisation is to enable a scenario where we wish
-        # to trigger a release on a first publish of an artifact to Nexus
+        # to trigger a release on a first publish of an artifact to Artifactory
         if not triggerState:
             artifactVersion = triggerState = '0.0.0'
     else:
-        print "Failed to fetch artifact metadata from Nexus repository %s" % server['url']
+        print "Failed to fetch artifact metadata from Artifactory repository %s" % server['url']
         response.errorDump()
         sys.exit(1)
 else:
