@@ -41,5 +41,5 @@ else:
 
     # populate output variables
     artifactVersion = triggerState
-    artifactRepositoryPath = "%s/%s/%s/%s-%s-dist.zip" % (server['url'], context,artifactVersion, artifactId,artifactVersion)
+    artifactRepositoryPath = "%s/%s/%s/%s-%s" % (server['url'], context,artifactVersion, artifactId,artifactVersion)
     print artifactRepositoryPath
