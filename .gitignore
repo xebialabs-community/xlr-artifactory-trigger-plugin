@@ -1,9 +1,11 @@
 # use glob syntax.
 syntax: glob
 .gradle/
+.idea
 
 # Build output
 build/
 
 # Mac
 .DS_Store
+*.iml

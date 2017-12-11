@@ -1,32 +1,44 @@
 <!--
 
-    THIS CODE AND INFORMATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR
-    IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS
-    FOR A PARTICULAR PURPOSE. THIS CODE AND INFORMATION ARE NOT SUPPORTED BY XEBIALABS.
+    Copyright 2017 XEBIALABS
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 -->
+
 <synthetic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xmlns="http://www.xebialabs.com/deployit/synthetic"
            xsi:schemaLocation="http://www.xebialabs.com/deployit/synthetic synthetic.xsd">
 
-    <type type="artifactory.PublishedArtifact" extends="xlrelease.ReleaseTrigger" description="Triggers release when a new version of an artifact is published to an Artifactory repository">
-        <!-- common -->
-        <property name="groupId" required="true" description="Group ID of the artifact"/>
-        <property name="artifactId" required="true" description="Artifact ID of the artifact"/>
-        <!-- repository -->
-        <property name="server" category="Repository" referenced-type="artifactory.Server" kind="ci" description="Artifactory server to poll"/>
-        <property name="repositoryId" category="Repository" required="true" description="Repository ID to watch, e.g. releases, snapshots, apache-snapshots"/>
-        <property name="username" category="Repository" default="" required="false" description="Custom username to override global server configuration"/>
-        <property name="password" category="Repository" default="" required="false" password="true" description="Custom password to override global server configuration"/>
+  <type type="artifactory.PublishedArtifact" extends="xlrelease.ReleaseTrigger"
+        description="Triggers release when a new version of an artifact is published to an Artifactory repository">
+    <!-- common -->
+    <property name="groupId" required="true" description="Group ID of the artifact"/>
+    <property name="artifactId" required="true" description="Artifact ID of the artifact"/>
+    <!-- repository -->
+    <property name="server" category="Repository" referenced-type="artifactory.Server" kind="ci"
+              description="Artifactory server to poll"/>
+    <property name="repositoryId" category="Repository" required="true"
+              description="Repository ID to watch, e.g. releases, snapshots, apache-snapshots"/>
+    <property name="username" category="Repository" default="" required="false"
+              description="Custom username to override global server configuration"/>
+    <property name="password" category="Repository" default="" required="false" password="true"
+              description="Custom password to override global server configuration"/>
 
-        <property name="triggerOnInitialPublish" category="Options" kind="boolean" default="false" required="false" description="Should suppress error when artifact not found for the given GAV coordinates. Set this to true when artifact was never published to Nexus and you want to trigger a release on the initial publish. Default value is 'false'"/>
-        
-        <!-- output variables -->
-        <property name="artifactVersion" category="variables" required="false" description="Latest artifact version. For Snapshots the version includes timestamp and build number"/>
-        <property name="artifactRepositoryPath" category="variables" required="false" description="Artifact path relative to the selected Artifactory repository"/>
-    </type>
+    <property name="triggerOnInitialPublish" category="Options" kind="boolean" default="false" required="false"
+              description="Should suppress error when artifact not found for the given GAV coordinates. Set this to true when artifact was never published to Nexus and you want to trigger a release on the initial publish. Default value is 'false'"/>
 
-    <type type="artifactory.Server" extends="configuration.HttpConnection">
-    </type>
+    <!-- output variables -->
+    <property name="artifactVersion" category="variables" required="false"
+              description="Latest artifact version. For Snapshots the version includes timestamp and build number"/>
+    <property name="artifactRepositoryPath" category="variables" required="false"
+              description="Artifact path relative to the selected Artifactory repository"/>
+  </type>
+
+  <type type="artifactory.Server" extends="configuration.HttpConnection" />
 
 </synthetic>

@@ -1,7 +1,11 @@
 #
-# THIS CODE AND INFORMATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR
-# IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS
-# FOR A PARTICULAR PURPOSE. THIS CODE AND INFORMATION ARE NOT SUPPORTED BY XEBIALABS.
+# Copyright 2017 XEBIALABS
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 
 ###################################################################################
@@ -11,7 +15,7 @@
 #  
 ###################################################################################
 
-import sys, string, urllib
+import sys
 from xml.dom.minidom import parseString
 
 if server is None:
@@ -21,7 +25,7 @@ if server is None:
 request = HttpRequest(server, username, password)
 context = "%s/%s/%s" % (repositoryId, groupId, artifactId)
 metadata_path = "%s/%s" % (context, "maven-metadata.xml")
-response = request.get(metadata_path, contentType = 'application/xml')
+response = request.get(metadata_path, contentType='application/xml')
 
 if not response.isSuccessful():
     if response.status == 404 and triggerOnInitialPublish:
@@ -41,5 +45,5 @@ else:
 
     # populate output variables
     artifactVersion = triggerState
-    artifactRepositoryPath = "%s/%s/%s/%s-%s" % (server['url'], context,artifactVersion, artifactId,artifactVersion)
+    artifactRepositoryPath = "%s/%s/%s/%s-%s" % (server['url'], context, artifactVersion, artifactId, artifactVersion)
     print artifactRepositoryPath
