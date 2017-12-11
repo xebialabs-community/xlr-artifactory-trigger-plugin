@@ -9,7 +9,7 @@
 
 This document describes the functionality provided by the XL Release Artifactory Trigger plugin.
 
-See the **[XL Release Documentation](https://docs.xebialabs.com/xl-release/)**] for background information on XL Release concepts.
+See the **[XL Release Documentation](https://docs.xebialabs.com/xl-release/)** for background information on XL Release concepts.
 
 # Overview
 
