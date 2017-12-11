@@ -14,24 +14,31 @@
            xmlns="http://www.xebialabs.com/deployit/synthetic"
            xsi:schemaLocation="http://www.xebialabs.com/deployit/synthetic synthetic.xsd">
 
-    <type type="artifactory.PublishedArtifact" extends="xlrelease.ReleaseTrigger" description="Triggers release when a new version of an artifact is published to an Artifactory repository">
-        <!-- common -->
-        <property name="groupId" required="true" description="Group ID of the artifact"/>
-        <property name="artifactId" required="true" description="Artifact ID of the artifact"/>
-        <!-- repository -->
-        <property name="server" category="Repository" referenced-type="artifactory.Server" kind="ci" description="Artifactory server to poll"/>
-        <property name="repositoryId" category="Repository" required="true" description="Repository ID to watch, e.g. releases, snapshots, apache-snapshots"/>
-        <property name="username" category="Repository" default="" required="false" description="Custom username to override global server configuration"/>
-        <property name="password" category="Repository" default="" required="false" password="true" description="Custom password to override global server configuration"/>
+  <type type="artifactory.PublishedArtifact" extends="xlrelease.ReleaseTrigger"
+        description="Triggers release when a new version of an artifact is published to an Artifactory repository">
+    <!-- common -->
+    <property name="groupId" required="true" description="Group ID of the artifact"/>
+    <property name="artifactId" required="true" description="Artifact ID of the artifact"/>
+    <!-- repository -->
+    <property name="server" category="Repository" referenced-type="artifactory.Server" kind="ci"
+              description="Artifactory server to poll"/>
+    <property name="repositoryId" category="Repository" required="true"
+              description="Repository ID to watch, e.g. releases, snapshots, apache-snapshots"/>
+    <property name="username" category="Repository" default="" required="false"
+              description="Custom username to override global server configuration"/>
+    <property name="password" category="Repository" default="" required="false" password="true"
+              description="Custom password to override global server configuration"/>
 
-        <property name="triggerOnInitialPublish" category="Options" kind="boolean" default="false" required="false" description="Should suppress error when artifact not found for the given GAV coordinates. Set this to true when artifact was never published to Nexus and you want to trigger a release on the initial publish. Default value is 'false'"/>
-        
-        <!-- output variables -->
-        <property name="artifactVersion" category="variables" required="false" description="Latest artifact version. For Snapshots the version includes timestamp and build number"/>
-        <property name="artifactRepositoryPath" category="variables" required="false" description="Artifact path relative to the selected Artifactory repository"/>
-    </type>
+    <property name="triggerOnInitialPublish" category="Options" kind="boolean" default="false" required="false"
+              description="Should suppress error when artifact not found for the given GAV coordinates. Set this to true when artifact was never published to Nexus and you want to trigger a release on the initial publish. Default value is 'false'"/>
 
-    <type type="artifactory.Server" extends="configuration.HttpConnection">
-    </type>
+    <!-- output variables -->
+    <property name="artifactVersion" category="variables" required="false"
+              description="Latest artifact version. For Snapshots the version includes timestamp and build number"/>
+    <property name="artifactRepositoryPath" category="variables" required="false"
+              description="Artifact path relative to the selected Artifactory repository"/>
+  </type>
+
+  <type type="artifactory.Server" extends="configuration.HttpConnection" />
 
 </synthetic>

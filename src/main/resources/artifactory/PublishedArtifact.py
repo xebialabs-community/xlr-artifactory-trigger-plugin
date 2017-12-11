@@ -15,7 +15,7 @@
 #  
 ###################################################################################
 
-import sys, string, urllib
+import sys
 from xml.dom.minidom import parseString
 
 if server is None:
@@ -25,7 +25,7 @@ if server is None:
 request = HttpRequest(server, username, password)
 context = "%s/%s/%s" % (repositoryId, groupId, artifactId)
 metadata_path = "%s/%s" % (context, "maven-metadata.xml")
-response = request.get(metadata_path, contentType = 'application/xml')
+response = request.get(metadata_path, contentType='application/xml')
 
 if not response.isSuccessful():
     if response.status == 404 and triggerOnInitialPublish:
@@ -45,5 +45,5 @@ else:
 
     # populate output variables
     artifactVersion = triggerState
-    artifactRepositoryPath = "%s/%s/%s/%s-%s" % (server['url'], context,artifactVersion, artifactId,artifactVersion)
+    artifactRepositoryPath = "%s/%s/%s/%s-%s" % (server['url'], context, artifactVersion, artifactId, artifactVersion)
     print artifactRepositoryPath
