@@ -1,10 +1,11 @@
 # Preface
 
 [![Build Status][xlr-artifactory-trigger-plugin-travis-image]][xlr-artifactory-trigger-plugin-travis-url]
+[![Github All Releases][xlr-artifactory-trigger-plugin-downloads-image] ]()
 
 [xlr-artifactory-trigger-plugin-travis-image]: https://travis-ci.org/xebialabs-community/xlr-artifactory-trigger-plugin.svg?branch=master
 [xlr-artifactory-trigger-plugin-travis-url]: https://travis-ci.org/xebialabs-community/xlr-artifactory-trigger-plugin
-
+[xlr-artifactory-trigger-plugin-downloads-image]: https://img.shields.io/github/downloads/xebialabs-community/xlr-artifactory-trigger-plugin/total.svg
 
 This document describes the functionality provided by the XL Release Artifactory Trigger plugin.
 
