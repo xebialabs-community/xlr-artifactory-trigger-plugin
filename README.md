@@ -1,12 +1,14 @@
 # Preface
 
 [![Build Status][xlr-artifactory-trigger-plugin-travis-image]][xlr-artifactory-trigger-plugin-travis-url]
-[![Code Climate][xlr-artifactory-trigger-plugin-code-climate-image] ][xlr-artifactory-trigger-plugin-code-climate-u
-rl]
+[![Codacy Badge][xlr-artifactory-trigger-plugin-codacy-image] ][xlr-artifactory-trigger-plugin-codacy-url]
+[![Code Climate][xlr-artifactory-trigger-plugin-code-climate-image] ][xlr-artifactory-trigger-plugin-code-climate-url]
 [![Github All Releases][xlr-artifactory-trigger-plugin-downloads-image] ]()
 
 [xlr-artifactory-trigger-plugin-travis-image]: https://travis-ci.org/xebialabs-community/xlr-artifactory-trigger-plugin.svg?branch=master
 [xlr-artifactory-trigger-plugin-travis-url]: https://travis-ci.org/xebialabs-community/xlr-artifactory-trigger-plugin
+[xlr-artifactory-trigger-plugin-codacy-image]: https://api.codacy.com/project/badge/Grade/ba25031cc15c44adb124c3add041f132
+[xlr-artifactory-trigger-plugin-codacy-url]: https://www.codacy.com/app/joris-dewinne/xlr-artifactory-trigger-plugin
 [xlr-artifactory-trigger-plugin-code-climate-image]: https://api.codeclimate.com/v1/badges/b4f9fd7a10b5c92ec33d/maintainability
 [xlr-artifactory-trigger-plugin-code-climate-url]: https://codeclimate.com/github/xebialabs-community/xlr-artifactory-trigger-plugin/maintainability
 [xlr-artifactory-trigger-plugin-downloads-image]: https://img.shields.io/github/downloads/xebialabs-community/xlr-artifactory-trigger-plugin/total.svg
