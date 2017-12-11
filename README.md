@@ -28,8 +28,8 @@ permission java.lang.RuntimePermission "accessClassInPackage.com.sun.org.apache.
 
 First, you need to add an entry in the [Configuration](https://docs.xebialabs.com/xl-release/how-to/create-custom-configuration-types-in-xl-release.html#configuration-page) section with information on how to connect to your Artifactory repository:
 
-![Trigger Configuration](/triggerConfig.png)
+![Trigger Configuration](/images/triggerConfig.png)
 
 The next step is to configure a new [trigger](https://docs.xebialabs.com/xl-release/how-to/create-a-release-trigger.html) for your XL Release [template](https://docs.xebialabs.com/xl-release/how-to/create-a-release-template.html):
 
-![Configuration](/triggerTemplate.png)
+![Configuration](/images/triggerTemplate.png)
