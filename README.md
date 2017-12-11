@@ -3,6 +3,7 @@
 [![Build Status][xlr-artifactory-trigger-plugin-travis-image]][xlr-artifactory-trigger-plugin-travis-url]
 [![Codacy Badge][xlr-artifactory-trigger-plugin-codacy-image] ][xlr-artifactory-trigger-plugin-codacy-url]
 [![Code Climate][xlr-artifactory-trigger-plugin-code-climate-image] ][xlr-artifactory-trigger-plugin-code-climate-url]
+[![License: MIT][xlr-artifactory-trigger-plugin-license-image] ][xlr-artifactory-trigger-plugin-license-url]
 [![Github All Releases][xlr-artifactory-trigger-plugin-downloads-image] ]()
 
 [xlr-artifactory-trigger-plugin-travis-image]: https://travis-ci.org/xebialabs-community/xlr-artifactory-trigger-plugin.svg?branch=master
@@ -11,6 +12,8 @@
 [xlr-artifactory-trigger-plugin-codacy-url]: https://www.codacy.com/app/joris-dewinne/xlr-artifactory-trigger-plugin
 [xlr-artifactory-trigger-plugin-code-climate-image]: https://api.codeclimate.com/v1/badges/b4f9fd7a10b5c92ec33d/maintainability
 [xlr-artifactory-trigger-plugin-code-climate-url]: https://codeclimate.com/github/xebialabs-community/xlr-artifactory-trigger-plugin/maintainability
+[xlr-artifactory-trigger-plugin-license-image]: https://img.shields.io/badge/License-MIT-yellow.svg
+[xlr-artifactory-trigger-plugin-license-url]: https://opensource.org/licenses/MIT
 [xlr-artifactory-trigger-plugin-downloads-image]: https://img.shields.io/github/downloads/xebialabs-community/xlr-artifactory-trigger-plugin/total.svg
 
 This document describes the functionality provided by the XL Release Artifactory Trigger plugin.
