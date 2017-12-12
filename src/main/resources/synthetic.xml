@@ -39,6 +39,10 @@
               description="Artifact path relative to the selected Artifactory repository"/>
   </type>
 
-  <type type="artifactory.Server" extends="configuration.HttpConnection" />
+  <type type="artifactory.Server" extends="configuration.HttpConnection">
+    <property name="checkConfigurationPath" hidden="true" default="/api/system/ping"/>
+    <property name="checkConfigurationContentType" hidden="true" default="text/plain"/>
+    <property name="scriptLocation" hidden="true" default="configuration/HttpConnectionCheck.py"/>
+  </type>
 
 </synthetic>
